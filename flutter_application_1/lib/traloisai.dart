@@ -73,7 +73,7 @@ class _DetailPage extends State<DetailPage> {
               ),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)))),
+                  borderRadius: BorderRadius.circular(13)))),
                   onPressed: () => {},
                   child: const Padding(
                     padding: EdgeInsets.fromLTRB (100 , 13, 100, 13),
@@ -84,7 +84,7 @@ class _DetailPage extends State<DetailPage> {
                 ),
               ),
                 ],
-                
+                    
               ),
           ],
         ),
