@@ -1,18 +1,33 @@
 import 'package:flutter/material.dart';
-import 'giao_dien_che_do_choi_vs.dart';
+import 'giao_dien_che_do_choi_battle.dart';
 
 void main() {
-  runApp(const ScreenPlayBattle());
+  runApp(const MyApp());
 }
 
-class ScreenPlayBattle extends StatefulWidget {
-  const ScreenPlayBattle({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const ScreenPlayVS(),
+    );
+  }
+}
+
+class ScreenPlayVS extends StatefulWidget {
+  const ScreenPlayVS({super.key});
 
   @override
-  State<ScreenPlayBattle> createState() => _ScreenPlayBattleState();
+  State<ScreenPlayVS> createState() => _ScreenPlayVSState();
 }
 
-class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
+class _ScreenPlayVSState extends State<ScreenPlayVS> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +50,7 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                   ),
                   // ignore: avoid_unnecessary_containers
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 20, 0, 80),
+                    padding: EdgeInsets.fromLTRB(0, 20, 00, 80),
                     child: Image(
                       image: AssetImage('images/3.png'),
                       fit: BoxFit.cover,
@@ -98,6 +113,10 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                         decoration: BoxDecoration(
                             color: Color.fromARGB(212, 3, 14, 112),
                             borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 5,
+                            )
                       ),
                       child: TextButton(
                         style: TextButton.styleFrom(
@@ -111,17 +130,12 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                       ),
-                      )
-                      ),
+                      )),
                         Text(""),
                         Container(
                         decoration: BoxDecoration(
                             color: Color.fromARGB(212, 3, 14, 112),
                             borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                              color: Colors.white,
-                              width: 5,
-                            )
                       ),
                       child: TextButton(
                         style: TextButton.styleFrom(
@@ -134,15 +148,15 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                         color: Colors.white,
                         fontSize: 8,
                         fontWeight: FontWeight.bold),),
-                      ),)
-                    ],
+                      ),
+                  )],
                   ),
                   Column(
                     children: [
                       Container(
                         child: Container(
-                        padding: EdgeInsets.fromLTRB(15, 0, 10, 0),
-                        decoration: BoxDecoration(
+                          padding: EdgeInsets.fromLTRB(25, 0, 20, 0),
+                          decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           border: Border.all(
@@ -151,16 +165,17 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                           )
                         ),
                         child:
-                              Text("Therizinosaurus",style: TextStyle(color: Colors.black, fontSize: 10),),
+                              Text("1 VS 1 Battle",style: TextStyle(color: Colors.black, fontSize: 10),),
                       ),
                       ),
                       Container(
-                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                        child: Container(
-                          decoration: BoxDecoration(
-                          image: DecorationImage(image: AssetImage('images/h4.jpg'),
-                          fit: BoxFit.cover,
+                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                    child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('images/h3.jpg'),
+                      fit: BoxFit.cover,
                       ),
+                      borderRadius: BorderRadius.circular(20)
                     ),
                     width: 100,
                     height: 100,
@@ -184,8 +199,8 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                     children: [
                       Container(
                         child: Container(
-                        padding: EdgeInsets.fromLTRB(25, 0, 20, 0),
-                        decoration: BoxDecoration(
+                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                          decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           border: Border.all(
@@ -194,21 +209,21 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                           )
                         ),
                         child:
-                              Text("Carnotaurus",style: TextStyle(color: Colors.black, fontSize: 10),),
+                              Text("Rank",style: TextStyle(color: Colors.black),),
                       ),
                       ),
                       Container(
-                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                        child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(image: AssetImage('images/h5.jpg'),
-                          fit: BoxFit.cover,
+                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                    child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('images/h2.jpg'),
+                      fit: BoxFit.cover,
                       ),
+                      borderRadius: BorderRadius.circular(20)
                     ),
-                  ),
-                    width: 120,
-                    height: 110,
-                  ),
+                    width: 100,
+                    height: 100,
+                  ),),
                   Container(
                     child: Container(
                       decoration: BoxDecoration(
