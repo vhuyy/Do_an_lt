@@ -35,38 +35,56 @@ class _ScreenPlayVSState extends State<ScreenPlayVS> {
         body: Center(
           child: Column(
             children: [
+              Padding(padding: EdgeInsets.fromLTRB(0, 50, 0, 0)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   // ignore: avoid_unnecessary_containers
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 40, 0, 70),
-                    child: Image(
-                      image: AssetImage('images/2.png'),
-                      fit: BoxFit.cover,
-                      width: 100,
-                      height: 100,
+                    child: TextButton(
+                      style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(35)))),
+                      onPressed: () => {},
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage('images/logo-gaming-free-fire-1.jpg'),
+                        radius: 25,
+                      ),
                     ),
                   ),
+
                   // ignore: avoid_unnecessary_containers
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 20, 00, 80),
-                    child: Image(
-                      image: AssetImage('images/3.png'),
-                      fit: BoxFit.cover,
-                      width: 150,
-                      height: 40,
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(0, 20, 0, 80),
-                    child: Image(
-                      image: AssetImage('images/4.png'),
-                      fit: BoxFit.cover,
-                      width: 110,
-                      height: 40,
-                    ),
-                  )
+                    width: 140,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.lightBlue,
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Row(children: [
+                      Padding(padding: EdgeInsets.fromLTRB(5, 0, 0, 0)),
+                      Image(
+                        image: AssetImage('images/dollar-coin.png'),
+                        width: 20,
+                      ),
+                      Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
+                      Text('500'),
+                      Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll<Color>(
+                              Colors.blueAccent),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50.0))),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          '+',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
                 ],
               ),
               Center(
