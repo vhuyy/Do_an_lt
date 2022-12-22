@@ -20,6 +20,7 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
         body: Center(
           child: Column(
             children: [
+              Padding(padding: EdgeInsets.fromLTRB(0, 50, 0, 0)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -69,8 +70,42 @@ class _ScreenPlayBattleState extends State<ScreenPlayBattle> {
                           style: TextStyle(fontSize: 20),
                         ),
                       ),
+                    ]),
+                  ),
+                  Container(
+                    width: 140,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.lightBlue,
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Row(children: [
+                      Padding(padding: EdgeInsets.fromLTRB(5, 0, 0, 0)),
+                      Image(
+                        image: AssetImage('images/banknote.png'),
+                        width: 20,
+                      ),
+                      Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
+                      Text('500'),
+                      Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0)),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll<Color>(
+                              Colors.blueAccent),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50.0))),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          '+',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
+                    ]),
+                  ),
                 ],
               ),
+              Padding(padding: EdgeInsets.fromLTRB(0, 50, 0, 0)),
               Center(
         child: Container(
         height: 300,
